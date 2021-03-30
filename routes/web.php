@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/','AuthController@index')->name('login');
 Route::post('/','AuthController@login')->name('login');
 
+Route::resource('register','RegisterController');
+
+
 Route::group(['middleware' => 'auth'] , function(){
     //landingpage
     Route::get('dashboard','DashboardController@index')->name('dashboard');    

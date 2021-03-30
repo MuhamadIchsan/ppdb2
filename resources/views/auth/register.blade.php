@@ -17,7 +17,8 @@
             <div class="col-lg-5">
             <div class="card">
                 <div class="card-body">
-                <form method="POST" action="{{ route('login') }}" class="needs-validation">
+                <h1>register</h1>
+                <form method="POST" action="{{ route('register.store') }}" class="needs-validation">
               @csrf
               <div class="form-group">
                 <label for="email">Email</label>
@@ -36,14 +37,22 @@
                   please fill in your password
                 </div>
               </div>              
+              <div class="form-group">
+                <div class="d-block">
+                  <label for="name" class="control-label">nama</label>
+                </div>
+                <input id="name" type="text" class="form-control" name="name" tabindex="2" required>
+                <div class="invalid-feedback">
+                  please fill in your password
+                </div>
+              </div>                                        
 
               <div class="form-group text-right">                
-                <button type="submit" class="btn btn-primary btn-lg btn-icon icon-right" tabindex="4">
-                  Login
+                <button type="submit" class="btn btn-primary mt-2 btn-icon icon-right" tabindex="4">
+                  Register
                 </button>
               </div>              
             </form>
-             <a href="{{ route('register.index') }}" class="btn btn-info">register</a>
                 </div>
             </div>            
         </div>
